@@ -1,0 +1,15 @@
+:root{
+    --clr-black: #000000;
+    --clr-light-black-1: #161618;
+    --clr-light-black-2: #1e1e20;
+    --clr-light-black-3: #252529;
+    --clr-light-black-2: #313136;
+    --clr-white: #ffffff;
+    --clr-dark-hover: #ebebf534;
+    --clr-green: #62f57a;
+    --clr-violet: #7d6bce;
+    --clr-violet-var-1: #b09ffc;
+    --clr-violet-var-2: rgba(125, 107, 206, 0.3);
+    --clr-red: rgb(236, 10, 10);
+    --clr-green-com: rgb(11, 218, 73);
+}

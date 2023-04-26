@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LRC Editor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="./css/top-bar.css">
+    <link rel="stylesheet" href="./css/bottom-bar.css"> -->
+  </head>
+  <body>
+    <div class="top-container">
+      <input type="file" id="file-selector" >
+      <button id="gen-lrc-btn">Generate</button>
+    </div>
+    
+    <div class="lrc-up-down-btn-cont" id="btm-btn-cont" style="visibility: visible;">
+      <button class="lrc-move-up" id="syncbtn-up">
+        <span class="material-symbols-outlined">
+          arrow_upward
+        </span>
+      </button>
+      <button class="lrc-move-down" id="syncbtn-down">
+        <span class="material-symbols-outlined">
+          arrow_downward
+          </span>
+      </button>
+    </div>
+    
+    <div class="bottom-container">
+      <input type="range" id="player-seek-bar" value="0">
+      <div id="current-run-time">
+        00:00.00
+      </div>
+      <div class="bottom-player-container">
+        <div class="btn">
+          <span class="material-symbols-outlined btn">
+            fast_rewind
+            </span>
+        </div>
+        <div class="btn">
+          <span class="material-symbols-outlined btn" id="bottom-play">
+            play_arrow
+          </span>
+        </div>
+        <div class="btn">
+          <span class="material-symbols-outlined btn">
+            fast_forward
+            </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-area-container">
+      <div class="work-area-tab-container">
+        <a href="#lyric-edit" class="tab-lyrics active" id="lyrics-tab">Lyrics</a>
+        <a href="#lyric-sync" class="tab-sync" id="sync-tab">Sync</a>
+      </div>
+
+      <div class="lyrics-section" id="lyric-edit">
+        <textarea name="" id="lyrics-holder" placeholder="Paste your lyrics here"></textarea>
+      </div>
+
+      <div class="lyrics-sync-section" id="lyric-sync">
+        <div class="sync-line-cont" class="active">
+          <div class="sync-up-down-cont">
+            <div id="sync-btn-pls" class="btn">
+              <span class="material-symbols-outlined">
+                add
+              </span>
+            </div>
+            <div class="sync-time-stam">
+              00:00:00
+            </div>
+            <div id="sync-btn-min" class="btn">
+              <span class="material-symbols-outlined">
+                remove
+              </span>
+            </div>
+          </div>
+
+          <div class="sync-text-cont">
+            ...
+          </div>
+
+          <div id="sync-play-btn-cont" class="btn">
+            <span class="material-symbols-outlined" class="btn">
+              play_arrow
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script src="./scripts/tab.js"></script>
+    <script src="./scripts/lrc.js"></script>
+  </body>
+</html>

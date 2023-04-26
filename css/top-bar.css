@@ -1,0 +1,43 @@
+@import "./css/colors.css";
+
+.top-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 20px;
+    /* width: 100%; */
+    background-color: var(--clr-light-black-1);
+    height: 70px;
+}
+
+#gen-lrc-btn, input::file-selector-button, .lrc-move-up, .lrc-move-down{
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--clr-green);
+    /* color: var(--clr-white); */
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#gen-lrc-btn:hover, input::file-selector-button{
+    cursor: pointer;
+    box-shadow: 5px 5px 10px var(--clr-light-black-3);
+    scale: 0.9;
+}
+
+#gen-lrc-btn:active, input::file-selector-button{
+    color: white;
+    scale: 1;
+}
+
+input::file-selector-button{
+    background-color: var(--clr-violet);
+}
